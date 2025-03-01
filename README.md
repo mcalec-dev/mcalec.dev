@@ -1,1 +1,1 @@
-# [web.mcalec.dev](https://web.mcalec.dev/)
+# [mcalec.dev](https://mcalec.dev/)
