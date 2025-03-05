@@ -1,4 +1,5 @@
 # TODO
 
 - fix bannerify
-- more pages
+- credits page
+- add more simalilty like old site
