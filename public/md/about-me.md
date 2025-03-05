@@ -3,7 +3,7 @@
 ## <span>DISCLAIMER</span>
 
 <span>I have "moved on" from developing to focus on school and my mental health. This site (and many others) won't be updated as often.</span>  
-<span>If you really need to contact me find my email below. See the Bluesky post [here](https://bsky.mcalec.dev/).</span>  
+<span>If you really need to contact me find my email below. See the [Bluesky post](https://bsky.mcalec.dev/) I made about this.</span>  
 
 <span>This site may not be fully complete, I suggest you to use [old.mcalec.dev](//old.mcalec.dev/) for any sort of updated information.</span>  
 
@@ -20,7 +20,7 @@
 
 ## <span>Read Me</span>
 
-<span>I have a statement on GitLab to clarify things about my projects. Find it [here](https://gitlab.com/mcalec-dev/mcalec.dev/blob/main/README.md).</span>  
+<span>I have a statement on my [GitLab README file](https://gitlab.com/mcalec-dev/mcalec.dev/blob/main/README.md) to clarify things about my projects.</span>  
 
 ## <span>Contact Me</span>
 
