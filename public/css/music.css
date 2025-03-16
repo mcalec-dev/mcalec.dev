@@ -123,32 +123,7 @@ p {
 }
 
 @media (max-width: 600px) {
-  #music-box {
-    width: fit-content;
-    max-width: 100%;
-    margin: 0 10px 10px 10px;
-  }
-
-  #music-box.empty {
-    margin: 0 10px 10px 10px;
-  }
-
-  #music-box.collapsed {
-    transform: translateX(calc(100% - 50px));
-  }
-
   #music-info {
-    font-size: 14px;
-    max-width: calc(100vw - 50px);
-  }
-
-  #music, #music-skip {
-    width: 30px;
-    height: 30px;
-  }
-
-  #collapse-toggle {
-    width: 20px;
-    height: 20px;
+    transform: translateY(calc(100% - 22.55px));
   }
 }

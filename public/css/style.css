@@ -23,7 +23,7 @@ body::-webkit-scrollbar {
 h1 {font-family: LatoRegular;}
 h1 b {font-family: LatoBold;}
 h1 i {font-family: LatoBoldItalic;}
-h2 {font-family: LatoRegular;}
+h2 {font-family: LatoRegular;margin: 1vh;}
 h2 b {font-family: LatoBold;}
 h2 i {font-family: LatoRegularItalic;}
 h3 {font-family: LatoLight;}

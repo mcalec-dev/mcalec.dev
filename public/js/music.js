@@ -1,6 +1,6 @@
 let songs = [];
 let currentSong = 0;
-const baseUrl = "//cdn.mcalec.dev/audio/";
+const baseUrl = "https://cdn.mcalec.dev/audio";
 async function loadSongs() {
   try {
     const response = await fetch('/json/songs.json');

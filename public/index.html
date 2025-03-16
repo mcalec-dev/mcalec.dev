@@ -5,6 +5,7 @@
   <link rel="stylesheet" type="text/css" href="/css/style.css" />
   <link rel="stylesheet" type="text/css" href="/css/loader.css" />
   <link rel="stylesheet" type="text/css" href="/css/music.css" />
+  <link rel="stylesheet" href="/css/navbar.css">
   <link rel="icon" type="image/png" href="/img/mcalec-dev.png">
   <link rel="apple-touch-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="152x152" href="/favicon.ico">
@@ -13,13 +14,11 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta property="og:title" content="mcalec.dev" />
-  <meta property="og:description" content="McAlec Development;
-  Making boring web projects." />
+  <meta property="og:description" content="McAlec Development; Making boring web projects." />
   <meta property="og:url"  content="https://mcalec.dev/" />
   <meta property="og:image" content="/img/mcalec-dev.png" />
   <meta name="theme-color" content="#000" data-react-helmet="true" />
-  <meta name="description" content="mcalec development
-  ..and yet im still here making stuff">
+  <meta name="description" content="mcalec development ..and yet im still here making stuff">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="mcalec.dev">
@@ -28,7 +27,7 @@
   <script defer src="//gc.zgo.at/count.js" data-goatcounter="https://mcalec.goatcounter.com/count"></script>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="37488ff3-cb26-4748-8ebe-8c7cb712f602"></script>
 </head>
-<div>
+<body>
   <div id="loaderContainer" class="loader-container">
     <img src="/img/load.gif" alt="Loading..." class="loader-gif">
     <div id="loaderText" class="loader-text">Loading...</div>
@@ -48,10 +47,14 @@
   </div>
 
   <script defer src="/js/music.js"></script>
-  <script defer src="/js/collapse.js"></script>
 
   <nav class="navbar transparent" id="navbar">
     <div class="site-name">mcalec.dev</div>
+    <div class="menu-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 6H21V8H3V6ZM3 11H21V13H3V11ZM3 16H21V18H3V16Z" fill="#dddddd"/>
+      </svg>
+    </div>
     <ul>
       <li class="active"><a href="/">Home</a></li>
       <li><a href="https://old.mcalec.dev/about-me">About</a></li>
@@ -60,7 +63,7 @@
     </ul>
   </nav>
 
-  <script src="/js/navbar.js" defer></script>
+  <script defer src="/js/navbar.js"></script>
 
   <div class="bg" id="home">
     <div class="bgimage"></div>
@@ -83,8 +86,8 @@
       <ul>
         <li><a href="https://old.mcalec.dev/legal/license/">License</a></li>
         <li><a href="https://old.mcalec.dev/legal/credits/">Credits</a></li>
-        <li><a href="https://old.mcalec.dev/legal/terms-of-use/">Terms of Use</a></li>
-        <li><a href="https://old.mcalec.dev/legal/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="https://old.mcalec.dev/legal/terms-of-use/">Terms</a></li>
+        <li><a href="https://old.mcalec.dev/legal/privacy-policy/">Privacy</a></li>
       </ul>
     </div>
   </div>

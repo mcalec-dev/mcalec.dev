@@ -12,7 +12,7 @@
 <span>Hi, I see that you landed here on my website! So let me tell you about myself (if you care).</span>  
 <span>I am a [Front-End Dev](https://www.w3schools.com/whatis/whatis_frontenddev.asp) and a (somewhat of a) [Full-stack Dev](https://www.w3schools.com/whatis/whatis_fullstack.asp).</span>  
 <span>I've created some small projects (i.e. this website) and created, now dead, Minecraft mods.</span>  
-<span>~~I have many other web projects at my [GitHub Organization](https://git.mcalec.dev/).~~</span>  
+<span>I have many other web projects at my [GitHub Website](https://git.mcalec.dev/) and at my [Gitea Page](https://gitea.mcalec.dev/).</span>  
 
 <span>Also I know alot of PowerShell and Batch scripting. Not sure why I like it, but go check it out on my GitHub (linked above).</span>  
 <span>Some front-end languages I know are, HTML, CSS, and JavaScript. Web frameworks wise I am planning to learn (soon).</span>  
