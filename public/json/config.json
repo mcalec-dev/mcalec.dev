@@ -1,0 +1,18 @@
+{
+  "title": "mcalec.dev",
+  "description": "mcalec development ..and yet im still here making stuff",
+  "author": "McAlec",
+  "keywords": [
+    "sample",
+    "project",
+    "configuration"
+  ],
+  "url": "https://mcalec.dev/",
+  "version": "1.0.0",
+  "license": "MIT",
+  "robots": [
+    "index",
+    "nofollow"
+  ],
+  "theme-color": "#00000"
+}

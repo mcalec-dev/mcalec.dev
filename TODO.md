@@ -2,5 +2,5 @@
 
 - fix bannerify
 - credits page
-- add more simalilty like old site
+- tweaks and stuff
 - fix 404 page

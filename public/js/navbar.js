@@ -11,12 +11,9 @@ window.addEventListener("scroll", () => {
 document.addEventListener('DOMContentLoaded', () => {
     const menuIcon = document.querySelector('.menu-icon');
     const navList = document.querySelector('.navbar ul');
-
     menuIcon.addEventListener('click', () => {
         navList.classList.toggle('show');
     });
-
-    // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!e.target.closest('.navbar')) {
             navList.classList.remove('show');

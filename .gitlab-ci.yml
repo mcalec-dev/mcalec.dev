@@ -1,7 +1,32 @@
-image: busybox
+image: node:20-alpine
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  cache:
+    paths:
+      - node_modules/
+  script:
+    - npm ci
+    - npm run build
+  artifacts:
+    paths:
+      - public/
+      - node_modules/
+      - package*.json
+      - startup.js
+      - util/
+
 pages:
   stage: deploy
+  dependencies:
+    - build
   script:
+    - echo "Deploying to GitLab Pages..."
+    - cp -r * public/
     - echo "The site will be deployed to $CI_PAGES_URL"
   artifacts:
     paths:

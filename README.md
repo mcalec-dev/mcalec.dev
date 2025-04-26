@@ -12,7 +12,7 @@ This is my personal website hosted at [mcalec.dev](https://mcalec.dev/).
 ## For GitHub/GitLab (etc.)
 
 Before suspending my account please contact the email below to let me know before any removals or takedowns.
-I do NOT condone in any malicious or hacking activities. Please reach out to me if you really think I'm a "hacker".
+I do NOT condone or partake in any malicious or hacking activities.
 
 GitHub/GitLab Removals: removals[at]mcalec[dot]dev
 
