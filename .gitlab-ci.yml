@@ -26,7 +26,14 @@ pages:
     - build
   script:
     - echo "Deploying to GitLab Pages..."
-    - cp -r * public/
+    # Create a temporary directory for staging
+    - mkdir -p temp_public
+    # Copy everything except public directory
+    - find . -maxdepth 1 ! -name public ! -name temp_public ! -name . -exec cp -r {} temp_public/ \;
+    # Clean public directory and move staged files
+    - rm -rf public/*
+    - mv temp_public/* public/
+    - rm -rf temp_public
     - echo "The site will be deployed to $CI_PAGES_URL"
   artifacts:
     paths:
