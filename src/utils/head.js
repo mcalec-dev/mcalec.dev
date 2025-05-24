@@ -2,7 +2,7 @@ const fs = require('fs').promises;
 const path = require('path');
 async function loadConfig() {
   try {
-    const configPath = path.join(__dirname, '..', 'public', 'json', 'config.json');
+    const configPath = path.join(__dirname, '..', '..', 'public', 'json', 'config.json');
     const configData = await fs.readFile(configPath, 'utf8');
     return JSON.parse(configData);
   } catch (error) {

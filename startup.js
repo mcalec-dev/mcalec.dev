@@ -2,7 +2,8 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const { applyHeadTags } = require('./util/head.js');
+const { applyHeadTags } = require('./src/utils/head.js');
+const glob = require('glob');
 const app = express();
 const port = process.env.PORT || 8080;
 app.use((req, res, next) => {
@@ -18,6 +19,9 @@ app.use((req, res, next) => {
   if (req.path.endsWith('.html')) {
     return res.redirect(301, req.path.slice(0, -5));
   }
+  if (req.path.endsWith('.htm')) {
+    return res.redirect(301, req.path.slice(0, -4));
+  }
   next();
 });
 
@@ -25,24 +29,25 @@ app.use(async (req, res, next) => {
   try {
     let filePath;
     const cleanPath = req.path.replace(/^\/+|\/+$/g, '');
+    const distDir = path.join(__dirname, 'dist');
     if (!cleanPath || cleanPath.endsWith('.html')) {
       if (!cleanPath) {
-        filePath = path.join(__dirname, 'public', 'index.html');
+        filePath = path.join(distDir, 'index.html');
       } else {
-        const basePath = path.join(__dirname, 'public', cleanPath);
-        const baseDir = path.join(__dirname, 'public', cleanPath.split('/')[0]);
+        const basePath = path.join(distDir, cleanPath);
+        const baseDir = path.join(distDir, cleanPath.split('/')[0]);
         if (!(await fileExists(baseDir))) {
-          filePath = path.join(__dirname, 'public', '404.html');
+          filePath = path.join(distDir, '404');
           res.status(404);
         }
         else if (await fileExists(basePath)) {
           filePath = basePath;
         } else if (await fileExists(basePath + '.html')) {
           filePath = basePath + '.html';
-        } else if (await fileExists(path.join(__dirname, 'public', cleanPath, 'index.html'))) {
-          filePath = path.join(__dirname, 'public', cleanPath, 'index.html');
+        } else if (await fileExists(path.join(distDir, cleanPath, 'index.html'))) {
+          filePath = path.join(distDir, cleanPath, 'index.html');
         } else {
-          filePath = path.join(__dirname, 'public', '404.html');
+          filePath = path.join(distDir, '404.html');
           res.status(404);
         }
       }
@@ -52,7 +57,7 @@ app.use(async (req, res, next) => {
     return express.static('public')(req, res, next);
   } catch (error) {
     const notFoundContent = await applyHeadTags(
-      await fs.promises.readFile(path.join(__dirname, 'public', '404.html'), 'utf8')
+      await fs.promises.readFile(path.join(__dirname, 'dist', '404.html'), 'utf8')
     );
     return res.status(404).send(notFoundContent);
   }
@@ -83,4 +88,28 @@ function startupBanner(port) {
   `;
   console.log(banner);
 }
-app.listen(port, () => { startupBanner(port); });
+
+async function compileHtmlToDist() {
+  const publicDir = path.join(__dirname, 'public');
+  const distDir = path.join(__dirname, 'dist');
+  if (!fs.existsSync(distDir)) {
+    fs.mkdirSync(distDir, { recursive: true });
+  }
+  const htmlFiles = glob.sync('**/*.html', { cwd: publicDir });
+  for (const relPath of htmlFiles) {
+    const srcPath = path.join(publicDir, relPath);
+    const destPath = path.join(distDir, relPath);
+    const destDir = path.dirname(destPath);
+    if (!fs.existsSync(destDir)) {
+      fs.mkdirSync(destDir, { recursive: true });
+    }
+    const raw = await fs.promises.readFile(srcPath, 'utf8');
+    const compiled = await applyHeadTags(raw);
+    await fs.promises.writeFile(destPath, compiled, 'utf8');
+  }
+}
+
+// Compile HTML files on startup
+compileHtmlToDist().then(() => {
+  app.listen(port, () => { startupBanner(port); });
+});

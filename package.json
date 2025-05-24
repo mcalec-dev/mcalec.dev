@@ -4,7 +4,8 @@
   "description": "personal website",
   "main": "startup.js",
   "scripts": {
-    "start": "node startup.js"
+    "start": "node startup.js",
+    "build": "node src/build.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   "homepage": "https://mcalec.dev/",
   "dependencies": {
     "dotenv": "^16.5.0",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "glob": "^11.0.2"
   }
 }
