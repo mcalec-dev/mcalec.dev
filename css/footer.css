@@ -1,0 +1,30 @@
+.footer {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: LatoRegular;
+  padding: 1.5rem;
+  transition: background-color 0.4s ease-in-out;
+  color: #ddd;
+  background-color: #000;
+  gap: 1rem;
+  text-align: center;
+  ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  ul li a {
+    color: #ddd;
+    transition: color 0.3s ease;
+  }
+  ul li a:hover {
+    color: #999;
+  }
+  p {
+    cursor: url('/img/cursor/text.cur'), text;
+  }
+}
