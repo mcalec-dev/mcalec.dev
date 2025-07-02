@@ -14,8 +14,12 @@
     <div class="music-content">
       <!--<img id="music-cover" src="//cdn.mcalec.dev/image/png/music.png" style="display: none;">-->
       <p class="toggle-link" id="music-info"></p>
-      <button id="music" class="music" title="Unpause the current song."></button> 
-      <button id="music-skip" class="music" title="Skip the current song."></button>
+      <button id="music" class="music" title="Unpause the current song.">
+        <img class="music-icon play" src="/img/music/play.png" alt="Play">
+      </button> 
+      <button id="music-skip" class="music" title="Skip the current song.">
+        <img class="music-icon skip" src="/img/music/skip.png" alt="Skip">
+      </button>
       <audio id="music-src" hidden=""></audio>
     </div>
   </div>

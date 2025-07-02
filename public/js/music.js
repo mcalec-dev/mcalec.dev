@@ -16,28 +16,34 @@ async function initMusic() {
         t = document.getElementById("music"),
         s = document.getElementById("music-skip"),
         n = document.getElementById("music-info");
-    async function o() {
+  const playImg = t.querySelector(".music-icon.play");
+  async function o() {
     let newIndex;
     do {
       newIndex = Math.floor(Math.random() * songs.length);
     } while (newIndex === currentSong && songs.length > 1);
-      currentSong = newIndex;
-      e.src = `${baseUrl}${songs[currentSong].src}`;
-      e.play();
-      t.setAttribute("title", "Unpause the current song.");
-      t.classList.add("paused");
-      s.style.display = "block";
-      n.textContent = songs[currentSong].title;
-      n.setAttribute("title", songs[currentSong].title);
-    }
-    currentSong = Math.floor(Math.random() * songs.length);
+    currentSong = newIndex;
     e.src = `${baseUrl}${songs[currentSong].src}`;
+    e.play();
+    t.setAttribute("title", "Pause the current song.");
+    t.classList.add("paused");
+    if (playImg) playImg.src = "/img/music/pause.png";
+    s.style.display = "block";
+    n.textContent = songs[currentSong].title;
     n.setAttribute("title", songs[currentSong].title);
-    t.addEventListener("click", async function () {
+  }
+  currentSong = Math.floor(Math.random() * songs.length);
+  e.src = `${baseUrl}${songs[currentSong].src}`;
+  n.setAttribute("title", songs[currentSong].title);
+  if (playImg) playImg.src = "/img/music/play.png";
+  t.setAttribute("title", "Unpause the current song.");
+  t.classList.remove("paused");
+  t.addEventListener("click", async function () {
     if (e.paused) {
-      e.play();
+      await e.play();
       t.classList.add("paused");
-      t.setAttribute("title", "Pause the current song.")
+      t.setAttribute("title", "Pause the current song.");
+      if (playImg) playImg.src = "/img/music/pause.png";
       s.style.display = "block";
       n.textContent = songs[currentSong].title;
       n.setAttribute("title", songs[currentSong].title);
@@ -45,6 +51,7 @@ async function initMusic() {
       e.pause();
       t.classList.remove("paused");
       t.setAttribute("title", "Unpause the current song.");
+      if (playImg) playImg.src = "/img/music/play.png";
     }
   });
   s.addEventListener("click", o);

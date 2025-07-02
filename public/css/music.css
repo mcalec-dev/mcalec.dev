@@ -68,9 +68,11 @@ p {
   display: none;
 }
 
+/* Hide skip button by default, show only when a song is playing */
 #music, #music-skip, #collapse-toggle {
-  width: 40px;
-  height: 40px;
+  max-width: 40px;
+  max-height: 40px;
+  background: none;
   background-size: contain;
   border: none;
   cursor: url('/img/cursor/pointer.cur'), pointer;
@@ -81,18 +83,29 @@ p {
   justify-content: center;
 }
 
+#music-skip {
+  display: none;
+}
+
+#music-box.playing #music-skip {
+  display: flex;
+}
+
 #music {
-  background: url("https://3kh0.net/svg/play.svg") no-repeat center center;
+  max-height: 64px;
+  max-width: 64px;
   z-index: 2;
 }
 
-#music.paused {
-  background: url("https://3kh0.net/svg/pause.svg") no-repeat center center;
+.music-icon {
+  width: 20px;
+  height: 20px;
+  filter: invert(0.85);
+  display: block;
 }
 
-#music-skip {
-  background: url("https://3kh0.net/svg/skip.svg") no-repeat center center;
-  display: none;
+.music.paused .music-icon.play {
+  display: block;
 }
 
 #collapse-toggle {
