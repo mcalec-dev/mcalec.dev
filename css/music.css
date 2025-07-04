@@ -111,7 +111,7 @@ p {
 #collapse-toggle {
   width: 30px;
   height: 20px;
-  background: url("/img/arrow1.png") no-repeat center center;
+  background: url("/img/music/collapse.png") no-repeat center center;
   background-size: contain;
   border: none;
   padding-left: 10px;

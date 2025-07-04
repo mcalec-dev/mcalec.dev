@@ -9,16 +9,16 @@ window.addEventListener("scroll", () => {
   }
 });
 document.addEventListener('DOMContentLoaded', () => {
-    const menuIcon = document.querySelector('.menu-icon');
-    const navList = document.querySelector('.navbar ul');
-    menuIcon.addEventListener('click', () => {
-        navList.classList.toggle('show');
-    });
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.navbar')) {
-            navList.classList.remove('show');
-        }
-    });
+  const menuIcon = document.querySelector('.menu-icon');
+  const navList = document.querySelector('.navbar ul');
+  menuIcon.addEventListener('click', () => {
+    navList.classList.toggle('show');
+  });
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.navbar')) {
+      navList.classList.remove('show');
+    }
+  });
 });
 document.getElementById("collapse-toggle").addEventListener("click", () => {
   document.getElementById("music-box").classList.toggle("collapsed");
