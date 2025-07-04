@@ -3,7 +3,7 @@ let currentSong = 0;
 const baseUrl = "https://cdn.mcalec.dev/audio";
 async function loadSongs() {
   try {
-    const response = await fetch('/json/songs.json');
+    const response = await fetch('https://cdn.mcalec.dev/web/json/wav-songs.json');
     songs = await response.json();
     initMusic();
   } catch (error) {
