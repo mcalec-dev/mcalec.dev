@@ -12,7 +12,6 @@ async function loadConfig() {
 }
 function generateHeadTags(config) {
   if (!config) return '';
-
   const metaTags = [
     `<meta charset="utf-8">`,
     `<meta name="viewport" content="width=device-width, initial-scale=1.0">`,
@@ -25,7 +24,6 @@ function generateHeadTags(config) {
     `<meta property="og:description" content="${config.description}">`,
     `<meta property="og:url" content="${config.url}">`,
   ];
-
   const linkTags = [
     `<link rel="stylesheet" type="text/css" href="/css/style.css">`,
     `<link rel="stylesheet" type="text/css" href="/css/loader.css">`,
@@ -38,19 +36,17 @@ function generateHeadTags(config) {
     `<link rel="shortcut icon" href="/favicon.ico">`,
     `<link rel="mask-icon" href="/favicon.ico" color="#000000">`
   ];
-
   const scriptTags = [
-    `<script defer type="module" src="https://cdn.mcalec.dev/web/js/zero-md/zero-md.min.js"></script>`,
+    `<script defer type="module" src="//cdn.mcalec.dev/web/js/zero-md/zero-md.min.js"></script>`,
     `<script defer src="//gc.zgo.at/count.js" data-goatcounter="https://mcalec.goatcounter.com/count"></script>`,
-    `<script defer src="https://cloud.umami.is/script.js" data-website-id="37488ff3-cb26-4748-8ebe-8c7cb712f602"></script>`
+    `<script defer src="//cloud.umami.is/script.js" data-website-id="37488ff3-cb26-4748-8ebe-8c7cb712f602"></script>`
   ];
-
-  return `
-    <title>${config.title}</title>
-    ${metaTags.join('\n    ')}
-    ${linkTags.join('\n    ')}
-    ${scriptTags.join('\n    ')}
-  `;
+  return [
+    `<title>${config.title}</title>`,
+    ...metaTags,
+    ...linkTags,
+    ...scriptTags
+  ].join('\n  ');
 }
 async function applyHeadTags(htmlContent) {
   try {
@@ -60,11 +56,11 @@ async function applyHeadTags(htmlContent) {
     const headRegex = /<head>[\s\S]*?<\/head>/i;
     const htmlRegex = /<html[^>]*>/i;
     if (headRegex.test(htmlContent)) {
-      return htmlContent.replace(headRegex, `<head>\n    ${headTags}\n  </head>`);
+      return htmlContent.replace(headRegex, `<head>\n  ${headTags}\n</head>`);
     } else if (htmlRegex.test(htmlContent)) {
-      return htmlContent.replace(htmlRegex, `$&\n  <head>\n    ${headTags}\n  </head>`);
+      return htmlContent.replace(htmlRegex, `$&<head>\n  ${headTags}\n</head>`);
     }
-    return `<html>\n  <head>\n    ${headTags}\n  </head>\n${htmlContent}\n</html>`;
+    return `<html><head>\n  ${headTags}\n</head>${htmlContent}</html>`;
   } catch (error) {
     return htmlContent;
   }

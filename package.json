@@ -1,10 +1,10 @@
 {
   "name": "mcalec.dev",
-  "version": "v2.1",
+  "version": "v2.2",
   "description": "personal website",
-  "main": "startup.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node startup.js",
+    "start": "node index.js",
     "build": "node src/build.js"
   },
   "repository": {
