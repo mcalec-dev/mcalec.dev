@@ -10,11 +10,8 @@
     "website"
   ],
   "url": "https://mcalec.dev/",
-  "version": "v2.2",
+  "version": "2.2",
   "license": "MIT",
-  "robots": [
-    "index",
-    "nofollow"
-  ],
+  "robots": ["index", "nofollow"],
   "theme-color": "#000000"
 }

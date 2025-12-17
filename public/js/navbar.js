@@ -1,6 +1,6 @@
 const navbar = document.getElementById("navbar");
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 2) {
+  if (window.scrollY > 1) {
     navbar.classList.remove("transparent");
     navbar.classList.add("scrolled");
   } else {
@@ -8,18 +8,15 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("scrolled");
   }
 });
-document.addEventListener('DOMContentLoaded', () => {
-  const menuIcon = document.querySelector('.menu-icon');
-  const navList = document.querySelector('.navbar ul');
-  menuIcon.addEventListener('click', () => {
-    navList.classList.toggle('show');
+document.addEventListener("DOMContentLoaded", () => {
+  const menuIcon = document.querySelector(".menu-icon");
+  const navList = document.querySelector(".navbar ul");
+  menuIcon.addEventListener("click", () => {
+    navList.classList.toggle("show");
   });
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.navbar')) {
-      navList.classList.remove('show');
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".navbar")) {
+      navList.classList.remove("show");
     }
   });
-});
-document.getElementById("collapse-toggle").addEventListener("click", () => {
-  document.getElementById("music-box").classList.toggle("collapsed");
 });
