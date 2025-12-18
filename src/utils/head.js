@@ -37,9 +37,9 @@ function generateHeadTags(config) {
     `<link rel="mask-icon" href="/favicon.ico" color="#000000">`
   ];
   const scriptTags = [
-    `<script defer type="module" src="//cdn.mcalec.dev/web/js/zero-md/zero-md.min.js"></script>`,
-    `<script defer src="//gc.zgo.at/count.js" data-goatcounter="https://mcalec.goatcounter.com/count"></script>`,
-    `<script defer src="//cloud.umami.is/script.js" data-website-id="37488ff3-cb26-4748-8ebe-8c7cb712f602"></script>`
+    `<script defer type="module" src="https://cdn.mcalec.dev/web/js/zero-md/zero-md.min.js"></script>`,
+    `<script defer src="https://gc.zgo.at/count.js" data-goatcounter="https://mcalec.goatcounter.com/count"></script>`,
+    `<script defer src="https://umami.mcalec.dev/script.js" data-website-id="6e7c1ae1-381f-46ca-a4de-183454ff3f20"></script>`,
   ];
   return [
     `<title>${config.title}</title>`,
