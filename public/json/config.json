@@ -1,17 +1,17 @@
 {
-  "title": "mcalec.dev",
-  "description": "mcalec development",
-  "author": "McAlec",
-  "keywords": [
-    "mcalec",
-    "mcalec.dev",
-    "web dev",
-    "personal website",
-    "website"
-  ],
-  "url": "https://mcalec.dev/",
-  "version": "2.2",
-  "license": "MIT",
-  "robots": ["index", "nofollow"],
-  "theme-color": "#000000"
+	"title": "mcalec.dev",
+	"description": "mcalec development",
+	"author": "McAlec",
+	"keywords": [
+		"mcalec",
+		"mcalec.dev",
+		"web dev",
+		"personal website",
+		"website"
+	],
+	"url": "https://mcalec.dev/",
+	"version": "2.3",
+	"license": "MIT",
+	"robots": ["index", "nofollow"],
+	"theme-color": "#000000"
 }

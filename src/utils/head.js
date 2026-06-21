@@ -25,17 +25,16 @@ function generateHeadTags(config) {
     `<meta property="og:url" content="${config.url}">`,
   ];
   const linkTags = [
-    `<link rel="stylesheet" type="text/css" href="/css/style.css">`,
-    `<link rel="stylesheet" type="text/css" href="/css/loader.css">`,
-    `<link rel="stylesheet" type="text/css" href="/css/music.css">`,
-    `<link rel="stylesheet" type="text/css" href="/css/navbar.css">`,
-    `<link rel="icon" type="image/png" href="/favicon.ico">`,
-    `<link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico">`,
-    `<link rel="icon" type="image/x-icon" sizes="32x32" href="/favicon.ico">`,
-    `<link rel="icon" type="image/x-icon" sizes="16x16" href="/favicon.ico">`,
-    `<link rel="shortcut icon" href="/favicon.ico">`,
-    `<link rel="mask-icon" href="/favicon.ico" color="#000000">`
-  ];
+		`<link rel="stylesheet" type="text/css" href="/css/style.css">`,
+		`<link rel="stylesheet" type="text/css" href="/css/loader.css">`,
+		`<link rel="stylesheet" type="text/css" href="/css/navbar.css">`,
+		`<link rel="icon" type="image/png" href="/favicon.ico">`,
+		`<link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico">`,
+		`<link rel="icon" type="image/x-icon" sizes="32x32" href="/favicon.ico">`,
+		`<link rel="icon" type="image/x-icon" sizes="16x16" href="/favicon.ico">`,
+		`<link rel="shortcut icon" href="/favicon.ico">`,
+		`<link rel="mask-icon" href="/favicon.ico" color="#000000">`,
+	]
   const scriptTags = [
     `<script defer type="module" src="https://cdn.mcalec.dev/web/js/zero-md/zero-md.min.js"></script>`,
     `<script defer src="https://gc.zgo.at/count.js" data-goatcounter="https://mcalec.goatcounter.com/count"></script>`,

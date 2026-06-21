@@ -1,25 +1,25 @@
 {
-  "name": "mcalec.dev",
-  "version": "v2.2",
-  "description": "personal website",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "build": "node src/build.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mcalec-dev/mcalec.dev"
-  },
-  "author": "mcalec",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mcalec-dev/mcalec.dev/issues"
-  },
-  "homepage": "https://mcalec.dev/",
-  "dependencies": {
-    "dotenv": "^16.5.0",
-    "express": "^5.1.0",
-    "glob": "^11.0.2"
-  }
+	"name": "mcalec.dev",
+	"version": "v2.3",
+	"description": "personal website",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"build": "node src/build.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mcalec-dev/mcalec.dev"
+	},
+	"author": "mcalec",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/mcalec-dev/mcalec.dev/issues"
+	},
+	"homepage": "https://mcalec.dev/",
+	"dependencies": {
+		"dotenv": "^17",
+		"express": "^5",
+		"glob": "^13"
+	}
 }
